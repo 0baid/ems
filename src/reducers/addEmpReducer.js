@@ -1,13 +1,15 @@
 const state = {
-    name:"Obaid",
-    id:""
+    name:"",
+    ID:"",
+    imgSrc:"",
+    skills:[""]
+    
 }
 
 const addEmpReducer = (mState = clone(state), action ) =>{
     switch(action.type){
-        case "ADD_EMP_DATA": 
-            mState.name=action.payload.name;
-            mState.id=action.payload.id;
+        case "ADD_EMP":
+            mState=action.payload;
             return clone(mState);
 
         default: 

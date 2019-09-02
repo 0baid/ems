@@ -1,6 +1,7 @@
 const state = {
     name:"Obaid",
     ID:"16NTU1167",
+    imgSrc:"https://picsum.photos/id/309/200/200",
     skills:["graphics","photoshop"]
 }
 
@@ -9,8 +10,7 @@ const addReducer = (mState = clone(state), action ) =>{
         case "ADD_DATA": 
             mState.skills.push(action.payload)
             return clone(mState);
-
-        default: 
+        default:
             return clone(mState);
     }
 }
